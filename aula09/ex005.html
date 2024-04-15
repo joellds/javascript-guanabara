@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOMt</title>
+    <style>
+        body {
+            background-color: rgb(94, 94, 247);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado:</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0] //o número entre [] representa qual paragrafo (p) ele vai retornar
+        window.document.write('Está escrito assim: ' + p1.innerText)
+        p1.style.color = 'blue'
+        /*
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando...' //alterando o q está escrito no HTML através do JS
+        */
+        var d = window.document.querySelector('div#msg') //como ele puxa CSS se usa # se fot html é .
+        d.style.background = 'blue'
+    </script>
+</body>
+</html>

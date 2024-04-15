@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubra o país baseado no ex009</title>
+</head>
+<body>
+    <h1>Qual o seu país?</h1>
+    <h2>Baseado no ex009.</h2>
+    Digite o seu país: <input type="text" name="txtpaís" id="txtpaís">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+    <script>
+        function calcular() {
+            var txtPais = window.document.querySelector('input#txtpaís').value
+            var resultado = window.document.querySelector('div#res');
+            resultado.innerHTML = `<p>Seu país é <strong>${txtPais}</strong>.</p>`
+            if (txtPais.toLowerCase() === 'brasil'){
+                resultado.innerHTML += `<p>Você é <strong>Brasileiro</strong>.</p>`
+            } else {
+                resultado.innerHTML += `<p>Aqui no Brasil você é <strong>ESTRANGEIRO</strong>.</p>`;
+            }          
+                      
+        }
+    </script>
+</body>
+</html>
